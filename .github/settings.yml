@@ -1,11 +1,7 @@
 # Upstream changes from _extends are only recognized when modifications are made to this file in the default branch.
 _extends: .github
 repository:
-  name: template
-  description: Template for Terraform Components
+  name: aws-backup
+  description: '### Adding Resources to the Backup - Adding Tags  Once an `aws-backup` with a plan and `selection_tags` has been established we can begin adding resources for it to backup by using the tagging method'
   homepage: https://cloudposse.com/accelerate
   topics: terraform, terraform-component
-
-
-
-
