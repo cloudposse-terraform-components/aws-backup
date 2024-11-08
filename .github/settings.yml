@@ -2,6 +2,6 @@
 _extends: .github
 repository:
   name: aws-backup
-  description: '### Adding Resources to the Backup - Adding Tags  Once an `aws-backup` with a plan and `selection_tags` has been established we can begin adding resources for it to backup by using the tagging method'
+  description: 'This component is responsible for provisioning an AWS Backup Plan'
   homepage: https://cloudposse.com/accelerate
   topics: terraform, terraform-component
