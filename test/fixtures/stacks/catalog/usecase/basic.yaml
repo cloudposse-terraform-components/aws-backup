@@ -1,0 +1,22 @@
+components:
+  terraform:
+    aws-backup/basic:
+      metadata:
+        component: aws-backup
+      vars:
+        plan_name_suffix: test
+        # https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html
+        rules:
+          - name: "plan-weekly"
+            schedule: "cron(0 5 ? * SAT *)"
+            start_window: 320 # 60 * 8              # minutes
+            completion_window: 10080 # 60 * 24 * 7  # minutes
+            lifecycle:
+              delete_after: 90 # 30 * 3               # days
+        selection_tags:
+          - type: STRINGEQUALS
+            key: aws-backup/efs
+            value: weekly
+          - type: STRINGEQUALS
+            key: aws-backup/rds
+            value: weekly
