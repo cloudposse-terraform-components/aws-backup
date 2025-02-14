@@ -1,9 +1,10 @@
 components:
   terraform:
-    aws-backup/basic:
+    aws-backup/disabled:
       metadata:
         component: target
       vars:
+        enabled: false
         plan_name_suffix: test
         # https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html
         rules:
