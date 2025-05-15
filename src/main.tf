@@ -1,6 +1,6 @@
 module "backup" {
   source  = "cloudposse/backup/aws"
-  version = "1.0.0"
+  version = "1.0.3"
 
   plan_name_suffix = var.plan_name_suffix
   vault_enabled    = var.vault_enabled
