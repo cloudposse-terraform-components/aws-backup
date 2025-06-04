@@ -86,7 +86,7 @@ variable "rules" {
 
 variable "advanced_backup_setting" {
   type = object({
-    backup_options = string
+    backup_options = map(string)
     resource_type  = string
   })
   description = "An object that specifies backup options for each resource type."
