@@ -7,8 +7,8 @@ tags:
 
 # Component: `backup`
 
-This component is responsible for provisioning an AWS Backup Plan. It creates a schedule for backing up given ARNs.
-
+This component is responsible for provisioning an AWS Backup Plan.
+It creates a schedule for backing up given ARNs.
 ## Usage
 
 **Stack Level**: Regional
@@ -231,8 +231,6 @@ components:
 
 To enable backup lock configuration, you can use the following snippet:
 
-- [AWS Backup Vault Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html)
-
 #### Compliance Mode
 
 Vaults locked in compliance mode cannot be deleted once the cooling-off period ("grace time") expires. During grace
@@ -263,7 +261,10 @@ backup_vault_lock_configuration:
 ```
 
 <!-- prettier-ignore-start -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- prettier-ignore-end -->
+
+
+<!-- markdownlint-disable -->
 ## Requirements
 
 | Name | Version |
@@ -330,18 +331,21 @@ No resources.
 | <a name="output_backup_selection_id"></a> [backup\_selection\_id](#output\_backup\_selection\_id) | Backup Selection ID |
 | <a name="output_backup_vault_arn"></a> [backup\_vault\_arn](#output\_backup\_vault\_arn) | Backup Vault ARN |
 | <a name="output_backup_vault_id"></a> [backup\_vault\_id](#output\_backup\_vault\_id) | Backup Vault ID |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- prettier-ignore-end -->
+<!-- markdownlint-restore -->
+
+
 
 ## References
 
-- [cloudposse/terraform-aws-components](https://github.com/cloudposse/terraform-aws-components/tree/main/modules/aws-backup) -
-  Cloud Posse's upstream component
+
+- [cloudposse-terraform-components](https://github.com/orgs/cloudposse-terraform-components/repositories) - Cloud Posse's upstream component
+
+- [How to Enable Cross-Region Backups in AWS-Backup](https://docs.cloudposse.com/layers/data/tutorials/how-to-enable-cross-region-backups-in-aws-backup/) - 
+
+- [AWS Backup Vault Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html) - 
 
 
 
-## Related How-to Guides
-
-- [How to Enable Cross-Region Backups in AWS-Backup](https://docs.cloudposse.com/layers/data/tutorials/how-to-enable-cross-region-backups-in-aws-backup/)
 
 [<img src="https://cloudposse.com/logo-300x69.svg" height="32" align="right"/>](https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse-terraform-components/aws-backup&utm_content=)
+
